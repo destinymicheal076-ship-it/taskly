@@ -108,6 +108,12 @@ h1 {
   outline-offset: 2px;
 }
 
+.error-message {
+  margin: -14px 0 16px 4px;
+  color: var(--danger);
+  font-size: 13px;
+}
+
 #task-list {
   list-style: none;
   padding: 0;
@@ -171,6 +177,7 @@ h1 {
   color: var(--text-muted);
 }
 
+.edit-btn,
 .delete-btn {
   flex-shrink: 0;
   background: none;
@@ -185,6 +192,16 @@ h1 {
   transition: background-color 0.15s ease, color 0.15s ease;
 }
 
+.edit-btn:hover {
+  background-color: rgba(99, 102, 241, 0.1);
+  color: var(--primary);
+}
+
+.edit-btn:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
 .delete-btn:hover {
   background-color: var(--danger-bg);
   color: var(--danger);
@@ -193,6 +210,19 @@ h1 {
 .delete-btn:focus-visible {
   outline: 2px solid var(--danger);
   outline-offset: 2px;
+}
+
+.edit-input {
+  flex: 1;
+  min-width: 0;
+  padding: 8px 10px;
+  font-size: 15px;
+  font-family: inherit;
+  color: var(--text);
+  border: 1.5px solid var(--primary);
+  border-radius: 8px;
+  outline: none;
+  background: #ffffff;
 }
 
 @media (max-width: 480px) {
